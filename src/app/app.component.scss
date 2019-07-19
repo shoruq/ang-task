@@ -1,0 +1,101 @@
+
+.class-border {
+    border-right: 2px solid black;
+
+    display: flex;
+
+}
+.border-hor {
+    border-bottom: 2px solid black;
+
+    display: flex;
+
+}
+body{
+    margin: 0 px;
+    padding:0
+}
+
+.classAll
+
+{
+    display:grid;
+    grid-template-rows:10% 90%;
+}
+
+.gr1
+{
+    display: grid;
+    grid-template-columns: 10% 90%;
+
+}
+
+.gr2
+{
+    display: grid;
+    grid-template-rows: 30% 70%;
+}
+.gr3
+{
+    display:grid;
+    grid-template-columns: 10% 90%;
+
+}
+    .c-grid {
+        display: grid;
+        grid-template-rows: 1fr 50px;
+    }
+
+    .c1-flex {
+        display: flex;
+
+    }
+
+    .c1-flex1 {
+        display: flex;
+        padding: 8px;
+        align-content: center;
+    }
+
+    .gr-logo
+    {
+
+
+        display:grid;
+        grid-template-columns: auto 200px auto 200px auto;
+    }
+
+    .c4:hover
+    {
+
+background: rgb(204, 230, 152);
+    }
+
+    .w{
+        font-size: 20px;
+        border-bottom: 1px solid black;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    .gr{
+        margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: 30px 100px 150px 1fr 100px 150px 1fr;
+    }
+    .ws{
+        font-size: 15px;
+    }
+    .wss{
+        font-size: 13px;
+    }
+
+    .gr-row{
+        display: grid;
+        padding: 20px;
+        grid-template-rows: 3px 20px 3px 20px 3px 20px 3px 20px ;
+    }
+    .gr-g{
+        display: grid;
+        grid-template-columns: 80px  100px 1fr;
+        margin-top:15px;
+    }
