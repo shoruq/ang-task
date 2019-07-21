@@ -1,4 +1,4 @@
-import { Component, OnInit, Output ,EventEmitter} from '@angular/core';
+import { Component, OnInit, Output ,EventEmitter,Input} from '@angular/core';
 
 @Component({
   selector: 'title-comp',
@@ -11,15 +11,6 @@ export class TitleCompComponent implements OnInit {
 
   ngOnInit() {
   }
-  maint:any;
-
-  @Output() mainTitle=new EventEmitter<string>();
-
-  send()
-  {
-      this.mainTitle.emit(this.maint);
-  
- 
-  }
+@Input() tit: String;
 
 }

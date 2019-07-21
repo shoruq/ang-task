@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'body-comp',
@@ -11,5 +11,7 @@ export class BodyCompComponent implements OnInit {
 
   ngOnInit() {
   }
+
+ @Input() text:String;
 
 }

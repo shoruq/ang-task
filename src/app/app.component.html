@@ -1,108 +1,23 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="c-grid">
+  <!--The content below is only a placeholder and can be replaced.-->
+<div class="main-dev image">
+  <div style="margin-left:400px;margin-top:10px"> <h1>Design your own alert</h1> </div>
 
+  <div class="g3t">
+    <!-- rectangle -->
 
-  <div class=" classAll" style="height: calc(100vh - 50px)">
+    <div>   </div>
 
-
-    <div class="c1-flex" style="background: #253A57;">
-      <!-- logo -->
-
-      <div class="c1-flex">
-        <!-- r1  -->
-        <div class="c1-flex1">
-          <div style="width: 25px;height: 25px;">
-            <img src="photoshop.svg" style="margin-right: 3px">
-          </div>
-          <div style="font-size: medium ; color: white">
-            Alert Maintinance - Wizard Mode
-          </div>
-        </div>
-
-        <div style="display: flex;flex: 1; "></div>
-        <div style="align-self:flex-start;"> <button>
-            staging - Delta Testing
-          </button>
-
-        </div>
-        <div style="display: flex;flex: 1;"></div>
-
-
+    <div class="box-class " [ngStyle]="setMyStyle()">
+      <div style="display: flex; align-items: center; padding: 15px ">
+        <pic-comp [url]='ur'></pic-comp>
+        <title-comp [tit]='t'></title-comp>
       </div>
+      <body-comp [text]='bodyt'></body-comp>
 
 
     </div>
-
-
-    <div class=" gr1">
-      <!-- 2 cols -->
-
-      <div class=" class-border" style="background: rgb(62, 79, 104);">
-        <!-- col1 -->
-      </div>
-
-
-      <div class="gr2">
-        <!-- col2 -->
-
-        <div class="border-hor" style="background: #98A2AC">
-
-          <!-- rectangle -->
-
-
-
-
-          <div class="box-rect"> 
-            <div class="ws"> 
-              {{print}}
-              
-
-
-              
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <div style="background: rgb(190, 201, 212)">
-
-          <!-- buttons  -->
-
-          <title-comp (mainTitle)="getValue($event)">
-            
-          </title-comp>
-
-          <body-comp>
-
-          </body-comp>
-
-
-          <color-comp> 
-          </color-comp>
-
-        
-           <pic-comp>
-
-           </pic-comp> 
-
-
-
-
-
-
-
-        </div>
-
-
-      </div>
-
-
-    </div>
-
-
+    <div style="display:flex;flex-direction: column;"> <input [style.background]="color" style="margin-bottom: 100px;margin-top:80px;" class="col" type="button" [(colorPicker)]="color" />
+    <input class="col" type="button" [(colorPicker)]="color2" [style.background]="color2"/> </div>
 
 
 
@@ -110,10 +25,63 @@
   </div>
 
 
-  <div style="background-color:#213866"></div>
+  <div class="grid2">
+    <!-- buttons -->
+
+
+    <div class="grid4">
+      <div><button class="btn0" onclick="document.getElementById('d1').setAttribute('style','display: flex');
+                document.getElementById('d2').setAttribute('style','display: none');
+                document.getElementById('d3').setAttribute('style','display: none');
+               ">
+          Title </button></div>
+      <div><button class="btn0" onclick="document.getElementById('d2').setAttribute('style','display: flex');
+        document.getElementById('d1').setAttribute('style','display: none');
+        document.getElementById('d3').setAttribute('style','display: none');
+      ">
+          Body </button></div>
+      <div><button style="margin-right: 20px;" class="btn2" onclick="document.getElementById('d3').setAttribute('style','display: flex');
+        document.getElementById('d2').setAttribute('style','display: none');
+        document.getElementById('d1').setAttribute('style','display: none');
+     
+        document.getElementById('picI').hidden = false; ">
+          Icons </button></div>
+
+    </div>
+
+
+    <div style="padding: 25px; align-items: center;">
+      <div id="d1" style="display: none">
+        <div style="font-size: 20px;margin-right:20px;"> Type a title:</div>
+        <input type="text" [(ngModel)]="t">
+      </div>
+      <div id="d2" style="display: none">
+        <div style="font-size: 20px;margin-right: 20px;"> Body:</div>
+        <textarea name="" id="" cols="50" rows="10" [(ngModel)]='bodyt'></textarea>
+      </div>
+
+      <div id="d3" style="display: none">
+        <div style="font-size: 20px;margin-right: 20px;"> Choose one of Icons</div>
+        <div style="display: flex; padding: 10px;">
+          <button class="pic" (click)="send1()"> <img src="assets/img/warning.png" id="pic1" class="im"></button>
+          <button class="pic" (click)="send2()"> <img src="assets/img/wrong.png" class="im" id="pic2"></button>
+          <button class="pic" (click)="send3()"> <img src="assets/img/play.png" id="pic3" class="im"></button>
+
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
 
 
 </div>
+
+
+
+
+
 
 
 <router-outlet></router-outlet>

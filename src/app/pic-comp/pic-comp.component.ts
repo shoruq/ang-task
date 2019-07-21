@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'pic-comp',
@@ -11,5 +11,7 @@ export class PicCompComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  element: HTMLElement;
+  @Input() url ;
+ 
 }
